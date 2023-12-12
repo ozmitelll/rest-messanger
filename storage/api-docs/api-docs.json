@@ -1,0 +1,61 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Doc API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/": {},
+        "/api/user": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Create User",
+                "operationId": "c81166c37bc4122ee079a75d0b7c2f09",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "Alex"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "example": "alex@gmail.com"
+                                            },
+                                            "password": {
+                                                "type": "string",
+                                                "example": "qwerty123_"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    }
+                }
+            }
+        },
+        "/api/items": {
+            "get": {
+                "operationId": "eaff128113e2eed922243c3cb6882b6b",
+                "responses": {
+                    "200": {
+                        "description": "Fetch items"
+                    }
+                }
+            }
+        }
+    }
+}
